@@ -9,15 +9,16 @@
     --font-secundaria: "Merriweather", serif; 
 
     --pes-font: 300; 
-    --pes-negreta: 400; 
+    --pes-negreta: 600; 
 
     --colorClar:  #d6eaf8;
     --colorFosc:   #5dade2; 
     --colorResaltar:  #176392; 
+    --colorlletres: #000; 
 
     --tamany-h1: 3rem;
     --tamany-h2: 2,25rem; 
-    --tamany-h3: 1,5rem; 
+    --tamany-h3: 3,5rem; 
     --tamany-h4: 1,25rem; 
 
 
@@ -27,21 +28,24 @@
     :root{
         --tamany-h1: 4,5rem; 
         --tamany-h2: 3,75rem; 
-        --tamany-h3: 1,5rem; 
+        --tamany-h3: 3,5rem; 
         --tamany-body: 1,25rem; 
 
     }
 
 }
-    
+
+strong{
+    font-weight: var(--pes-negreta);
+}
 
 
 body{
     background: var(--colorClar); 
-    color: var(--colorFosc); 
+    color: var(--colorlletres); 
     margin: 0; 
-    font-family: var(--font-principal)
-    font-size: var(--tamany-body)
+    font-family: var(--font-principal);
+    font-size: var(--tamany-body);
     line-height: 1,6; 
 }
 
@@ -66,3 +70,49 @@ h2{
 h3{
     font-size: var(--tamany-h3);
 }
+
+.titol {
+    margin-bottom: 0.25;
+}
+
+.titol-intro{
+    font-weight: var(--pes-font);
+}
+
+.subtítol{
+    margin: 0;
+    font-size: var(--tamany-h3);
+}
+
+.subtítol-intro, 
+.subtítol-about{
+    background: var(--colorFosc);
+    font-family: var(--font-secundaria)
+}
+
+.titol-intro strong {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
