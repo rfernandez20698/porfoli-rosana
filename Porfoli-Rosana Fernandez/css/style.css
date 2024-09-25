@@ -31,6 +31,7 @@
         --tamany-h3: 3,5rem; 
         --tamany-body: 1,25rem; 
 
+        --sombra: 0.25 0.25 0.75 rgba(0, 0, 0, 0.25)
     }
 
 }
@@ -47,6 +48,9 @@ body{
     font-family: var(--font-principal);
     font-size: var(--tamany-body);
     line-height: 1,6; 
+}
+section{
+    padding: 5rem 2rem;
 }
 
 img{
@@ -87,13 +91,55 @@ h3{
 .subtítol-intro, 
 .subtítol-about{
     background: var(--colorFosc);
-    font-family: var(--font-secundaria)
+    font-family: var(--font-secundaria);
+    margin-bottom: 2rem; 
 }
 
 .titol-intro strong {
     display: block;
 }
 
+.intro {
+    position: relative;
+}
+@media(min-width: 600px) {
+    .intro{
+        display: grid;
+        margin: auto;
+        width: min-content;
+        grid-column-gap: 1em;
+        display: grid;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .intro-img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative; 
+        z-index: 2;
+    
+    }
+    .subtitol-intro{
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right; 
+        position: relative; 
+        left: -1.5em;
+        width: calc(100% + 1,5em);
+        z-index: 4;
+    }
+}
+
+.intro-img{
+    box-shadow: var(--sombra);
+}
+
+.subtitol-intro{
+    display: inline-block;
+}
 
 
 
