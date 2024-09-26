@@ -21,6 +21,8 @@
     --tamany-h3: 3,5rem; 
     --tamany-h4: 1,25rem; 
 
+    --sombra: ¡1.25 1.25 0.75 rgba(253, 7, 7, 0.25);
+
 
 }
 
@@ -31,7 +33,7 @@
         --tamany-h3: 3,5rem; 
         --tamany-body: 1,25rem; 
 
-        --sombra: 0.25 0.25 0.75 rgba(0, 0, 0, 0.25)
+
     }
 
 }
@@ -141,9 +143,35 @@ h3{
     display: inline-block;
 }
 
+.meusServeis{
+    background-color: var(--colorFosc);
+    color: var(--colorlletres);
+    text-align: center;
+    background-image: url(../img/64c927ca910e0.avif);
+    background-size: cover;
+    background-blend-mode: lighten;
 
+}
+.titol-serveis{
+    color: var(--colorResaltar);
+    position: relative;
+}
 
-
+@media(min-width:800px) {
+    .serveis{
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .servei + .servei{
+        margin-left: 2em;
+    }
+}
+.servei{
+    max-width: 500px ;
+    margin: 0 auto;
+}
 
 
 
