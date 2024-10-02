@@ -5,11 +5,11 @@
 }
 
 :root{
-    --font-principal: "Josefin Sans", sans-serif; 
-    --font-secundaria: "Merriweather", serif; 
+    --font-principal: "Roboto Mono", system-ui; 
+    --font-secundaria: "Lora", system-ui; 
 
     --pes-font: 300; 
-    --pes-negreta: 600; 
+    --pes-negreta: 900; 
 
     --colorClar:  #d6eaf8;
     --colorFosc:   #5dade2; 
@@ -18,15 +18,16 @@
 
     --tamany-h1: 3rem;
     --tamany-h2: 2,25rem; 
-    --tamany-h3: 3,5rem; 
-    --tamany-h4: 1,25rem; 
+    --tamany-h3: 1,5rem; 
+    --tamany-body: 1rem; 
 
-    --sombra: ¡1.25 1.25 0.75 rgba(253, 7, 7, 0.25);
+    --sombra: 0.25 0.25 0.75 rgba(0, 0, 0, 0.25);
+
 
 
 }
 
-@media (min-widht:880px) {
+@media (min-widht:800px) {
     :root{
         --tamany-h1: 4,5rem; 
         --tamany-h2: 3,75rem; 
@@ -36,6 +37,9 @@
 
     }
 
+}
+nav{
+    display: none;
 }
 
 strong{
@@ -49,10 +53,10 @@ body{
     margin: 0; 
     font-family: var(--font-principal);
     font-size: var(--tamany-body);
-    line-height: 1,6; 
+    line-height: 1.6; 
 }
 section{
-    padding: 5rem 2rem;
+    padding: 5em 2em;
 }
 
 img{
@@ -62,9 +66,10 @@ img{
 h1,
 h2,
 h3 {
-    line-height: 1,1;
+    line-height: 1;
     margin: 0;
 }
+
 h1{
     font-size: var(--tamany-h1);
 }
@@ -91,10 +96,11 @@ h3{
 }
 
 .subtítol-intro, 
-.subtítol-about{
+.subtitol-about{
     background: var(--colorFosc);
     font-family: var(--font-secundaria);
-    margin-bottom: 2rem; 
+    margin-bottom: 1rem; 
+    padding: .25em 1em;
 }
 
 .titol-intro strong {
@@ -107,7 +113,7 @@ h3{
 @media(min-width: 600px) {
     .intro{
         display: grid;
-        margin: auto;
+        margin: 0 auto;
         width: min-content;
         grid-column-gap: 1em;
         display: grid;
@@ -130,8 +136,8 @@ h3{
         text-align: right; 
         position: relative; 
         left: -1.5em;
-        width: calc(100% + 1,5em);
-        z-index: 4;
+        width: calc(100% + 1.5em);
+        
     }
 }
 
@@ -146,10 +152,12 @@ h3{
 .meusServeis{
     background-color: var(--colorFosc);
     color: var(--colorlletres);
-    text-align: center;
+    
     background-image: url(../img/64c927ca910e0.avif);
     background-size: cover;
     background-blend-mode: lighten;
+
+    text-align: center;
 
 }
 .titol-serveis{
@@ -157,7 +165,16 @@ h3{
     position: relative;
 }
 
-@media(min-width:800px) {
+.serveis{
+    margin-bottom: 4em;
+}
+
+.servei{
+    max-width: 500px;
+    margin: auto;
+}
+
+@media(min-width:600px) {
     .serveis{
         display: flex;
         max-width: 1000px;
@@ -172,6 +189,119 @@ h3{
     max-width: 500px ;
     margin: 0 auto;
 }
+
+
+
+.about{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-img{
+    box-shadow: var(--sombra) ; 
+}
+
+
+@media (min-width:600px) {
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+
+}
+.titol-about{
+    grid-area: title; 
+}
+
+.subtitol-about{
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+}
+.about-img{
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitol-treballs{
+    color: var(--colorResaltar);
+    font-weight: var(--pes-negreta); 
+    margin-bottom: 1em;
+}
+
+.treballs{
+    background-color:var(--colorFosc);
+    color: var(--colorClar);
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+@media (min-width:600px) {
+    .about{
+        display: grid;
+        margin: 0 auto;
+        width: min-content;
+        grid-column-gap: 5em;
+        grid-template-columns: 
+        "title img"
+        "subtitle img";
+        grid-template-columns: min-content max-content;
+    }
+}
+
+.titol-about{
+    grid-area: img;
+    min-width: 250px;
+    z-index: 2;
+}
+
+.about-subtitle{
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right; 
+    position: relative; 
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+      
+}
+
+.about-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative; 
+    z-index: 2;
+
+}
+
+
 
 
 
