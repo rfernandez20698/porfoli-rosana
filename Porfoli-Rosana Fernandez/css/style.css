@@ -245,7 +245,27 @@ h3{
     text-align: center;
 
 }
+.porfoli{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
+}
+.porfoli-object{
+    background: var(--colorFosc);
+    overflow: hidden;
+}
+
+.porfoli-img{
+    transition: 
+    transform 750ms cubic-bezier(.5, 0, .5, 1)
+    opacity 250ms linear;
+}
+
+.porfoli-img:hover{
+    transform: scale(1.2);
+    opacity: .5;
+
+}
 
 
 
