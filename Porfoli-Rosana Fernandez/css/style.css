@@ -267,11 +267,68 @@ h3{
     opacity: .5;
 
 }
+.btn{
+    display: inline-block;
+    background-color: var(--colorClar);
+    padding: 0.5em 2.5em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem; 
+    font-weight: var(--pes-negreta);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
 
+}
 
+.btn:hover{
+transform: scale(1.1);
+}
 
+.footer{
+    background-color: var(--colorFosc);
+    color: var(--colorResaltar);
+    text-align: center;
+    font-size: var(--tamany-h3); 
+    padding: 2.5em 0em;
+    color: var(--colorlletres);
+    text-decoration: none;
 
+}
 
+.footer a{
+    color: var(--colorlletres);
+    text-decoration: none;
+}
+
+.link{
+    font-weight: var(--pes-negreta);
+  
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.link-list{
+    padding: 0.5em; 
+    
+}
+
+.link-list:hover,
+.link:hover{
+    opacity: .7;
+}
+.item-list{
+    margin: 0 0.5em;
+}
+.lista{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0.7em;
+}
 
 
 
