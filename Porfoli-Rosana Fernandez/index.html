@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet ">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
     <script src="https://kit.fontawesome.com/d6ad861d1b.js" crossorigin="anonymous"></script>
     <title>Rosana Fernández</title>
 </head>
@@ -20,8 +21,8 @@
             <img src="./img/rosana-fernandez-high-resolution-logo-black-transparent.png">
 
         </div>
-        <button>
-            <span></span>
+        <button class="desplegable">
+            <span class="hamburguer"></span>
         </button>
         <nav class="menu">
             <ul class="menu-lista">
@@ -126,5 +127,10 @@
         </ul>
     </footer>
 </body>
+<script>
+    document.getElementById("hola").addEventListener("click", function(){
+        document.getElementById("m").classList.add("rosana");
+    })
+</script>
 
 </html>
