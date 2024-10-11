@@ -376,11 +376,13 @@ font-size: var(--tamany-h2);
 .hamburguer{
     display: block;
     position: fixed;
+    right: 1em;
+    top: 3em;
 }
 
-.hamburger,
-.hamburger::after,
-.hamburger::before{
+.hamburguer,
+.hamburguer::after,
+.hamburguer::before{
     background-color: var(--colorFosc);
     width: 2em;
     height: 6px;
@@ -388,17 +390,17 @@ font-size: var(--tamany-h2);
     transition: tranform 250ms ease-in-out;
 }
 
-.hamburger::before,
-.hamburger::after{
+.hamburguer::before,
+.hamburguer::after{
     content: '';
     position: absolute;
     left: 0;
     right: 0;
 }
 
-.hamburger::after {top: 12px;}
+.hamburguer::after {top: 12px;}
 
-.hamburger::before {bottom: 12px;}
+.hamburguer::before {bottom: 12px;}
 
 .desplegable{
     padding: .5em;
